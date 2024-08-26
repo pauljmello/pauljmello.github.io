@@ -1,0 +1,345 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Container */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px 0;
+}
+
+/* Header */
+header {
+    background: #fff;
+    padding: 10px 0;
+    border-bottom: 1px solid #eaeaea;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: #007acc;
+}
+
+/* Main Content */
+.main-content {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.left-column {
+    flex: 1;
+    max-width: 300px;
+}
+
+.right-column {
+    flex: 3;
+}
+
+/* Profile Section */
+.profile-section,
+.section,
+.education-section {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.profile-picture img {
+    width: 150px;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto 20px;
+}
+
+.profile-details h1 {
+    font-size: 1.8rem;
+    color: #007acc;
+    text-align: center;
+}
+
+.profile-details p {
+    margin: 10px 0;
+    color: #555;
+    text-align: center;
+}
+
+.contact-info,
+.social-links {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.contact-info a,
+.social-links a {
+    color: #007acc;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 5px;
+}
+
+.contact-info a:hover,
+.social-links a:hover {
+    text-decoration: underline;
+}
+
+/* Remove bullets for education list */
+.education-list.no-bullets {
+    list-style: none;
+    margin-left: 0;
+    padding: 0;
+    position: relative;
+}
+
+.education-list.no-bullets li {
+    margin-bottom: 10px;
+    position: relative;
+    padding-right: 100px; /* Adjust space for the date on the right */
+}
+
+.education-list.no-bullets ul {
+    margin-top: 5px;
+    margin-left: 20px; /* Keep sub-items indented */
+}
+
+.education-list.no-bullets ul li {
+    margin-bottom: 5px;
+    list-style: none;
+}
+
+/* Styling for clickable thesis link */
+.education-list.no-bullets ul li a {
+    color: #007acc;
+    text-decoration: none;
+}
+
+.education-list.no-bullets ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Minimal date styling */
+.date-posted {
+    position: absolute;
+    right: 0;
+    top: 0;
+    color: #666;
+    font-size: 0.9rem;
+    font-style: italic;
+}
+
+/* Right Column Sections */
+.section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #007acc;
+}
+
+.section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.section ul li {
+    margin-bottom: 10px;
+    position: relative;
+    padding-right: 120px; /* Adjust space for the date on the right */
+}
+
+.section ul li a {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.section ul li a:hover {
+    color: #007acc;
+}
+
+/* Show More and View All Buttons Inline */
+.show-more {
+    background: none;
+    color: #007acc;
+    border: none;
+    padding: 0;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 1rem;
+    text-decoration: none;
+}
+
+.view-all a {
+    background: none;
+    color: #007acc;
+    border: none;
+    padding: 0;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 1rem;
+    text-decoration: none;
+}
+
+.show-more:hover, .view-all a:hover {
+    text-decoration: underline;
+}
+
+.show-more-container {
+    display: flex;
+    justify-content: space-between; /* Aligns Show More to the left and View All to the right */
+    align-items: center; /* Ensures vertical alignment */
+    width: 100%;
+    margin-top: 10px;
+}
+
+/* Hidden links styling */
+.hidden-links {
+    display: none;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out;
+}
+
+.hidden-links.expanded {
+    display: block;
+    max-height: 500px; /* Adjust this to fit your content */
+}
+
+/* Footer */
+footer {
+    background: #fff;
+    padding: 20px 0;
+    border-top: 1px solid #eaeaea;
+    text-align: center;
+}
+
+footer p {
+    color: #777;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .main-content {
+        flex-direction: column;
+    }
+
+    .profile-section {
+        text-align: center;
+    }
+
+    .profile-picture img {
+        width: 100px;
+    }
+
+    .profile-details h1 {
+        font-size: 1.5rem;
+    }
+
+    .section h2 {
+        font-size: 1.3rem;
+    }
+
+    .show-more-container {
+        display: flex;
+        justify-content: space-between; /* Aligns Show More to the left and View All to the right */
+        align-items: center; /* Ensures vertical alignment */
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .view-all {
+        margin-top: 10px;
+        text-align: left;
+    }
+}
+
+/* Shared styles for research and education blocks */
+.left-column .profile-section, 
+.left-column .research-section, 
+.left-column .education-section {
+    width: 100%; /* Ensure all sections are the same width */
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    font-size: 0.9rem; /* Decreased font size for consistency */
+}
+
+/* Heading styles */
+.left-column .profile-section h1,
+.left-column .research-section h3,
+.left-column .education-section h3 {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    color: #007acc;
+}
+
+/* Additional specific adjustments for profile section */
+.left-column .profile-section {
+    text-align: center;
+}
+
+.left-column .profile-section .contact-info,
+.left-column .profile-section .social-links {
+    margin-top: 10px;
+}
+
+.left-column .research-section ul,
+.left-column .education-section ul {
+    padding-left: 20px;
+}
+
+.left-column .education-section ul ul {
+    margin-top: 5px;
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+.left-column .education-section ul ul li a {
+    color: #007acc;
+    text-decoration: none;
+}
+
+.left-column .education-section ul ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Styled Quote */
+.styled-quote {
+    font-style: italic;
+    font-size: 1.0rem;
+    color: #666;
+    padding: 5px 20px; 
+    border-left: 8px solid #0066cc; 
+    background-color: #f2f2f2;
+    display: inline-block;
+    margin: 15px auto; 
+    font-family: 'Georgia', serif;
+    text-align: center;
+    position: relative;
+}
