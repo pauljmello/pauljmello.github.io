@@ -36,3 +36,13 @@ function togglePublicationList() {
         button.textContent = "See less...";
     }
 }
+
+// Toggle the navigation menu
+document.getElementById('menu-icon').onclick = function() {
+    var navLinks = document.getElementById('nav-links');
+    if (navLinks.classList.contains('show-menu')) {
+        navLinks.classList.remove('show-menu');
+    } else {
+        navLinks.classList.add('show-menu');
+    }
+};
