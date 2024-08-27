@@ -24,19 +24,16 @@ body {
 header {
     background: #fff;
     padding: 10px 0;
-    border-bottom: 1px solid #eaeaea;
+    /* Removed border-bottom */
 }
 
+/* General Navigation Styles */
 nav ul {
     list-style: none;
     display: flex;
     justify-content: center;
     gap: 20px;
     flex-wrap: wrap;
-}
-
-nav ul li {
-    margin-bottom: 10px;
 }
 
 nav ul li a {
@@ -50,15 +47,48 @@ nav ul li a:hover {
     color: #007acc;
 }
 
-@media (max-width: 768px) {
+/* Hamburger Menu Icon */
+.menu-icon {
+    display: none; /* Hide by default */
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+@media (max-width: 1100px) {
+    /* Show the menu icon on mobile devices */
+    .menu-icon {
+        display: block;
+        color: #333;
+        text-align: right;
+        margin-right: 20px;
+    }
+
+    /* Hide the navigation links initially on mobile */
     nav ul {
         flex-direction: column;
-        align-items: center;
+        align-items: flex-start;
+        display: none;
+    }
+
+    /* Show the navigation links when the menu is toggled */
+    nav ul.show-menu {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
     }
 
     nav ul li {
-        margin-bottom: 10px;
-        text-align: center;
+        width: 100%;
+        text-align: left;
+        margin: 0;
+    }
+
+    nav ul li a {
+        display: block;
+        width: 100%;
+        padding: 15px;
+        border-bottom: 1px solid #eaeaea;
     }
 }
 
@@ -70,18 +100,20 @@ nav ul li a:hover {
     flex-wrap: wrap;
 }
 
+/* Adjusting Column Widths */
 .left-column {
-    flex: 1;
-    max-width: 300px;
+    flex: 1.5; /* Increase the flex value to make the left column wider */
+    max-width: 400px; /* Optionally, increase the max-width */
 }
 
 .right-column {
-    flex: 3;
+    flex: 4; /* Adjust the right column to maintain balance */
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1100px) {
     .left-column, .right-column {
-        max-width: 100%;
+        max-width: 100%; /* Ensure full width on mobile */
+        flex: 1; /* Equalize flex on mobile */
     }
 }
 
@@ -95,6 +127,7 @@ nav ul li a:hover {
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
+    /* Removed border-left */
 }
 
 .profile-picture img {
@@ -106,7 +139,7 @@ nav ul li a:hover {
 }
 
 .profile-details h1 {
-    font-size: 1.8rem;
+    font-size: 2.0rem;
     color: #007acc;
     text-align: center;
 }
@@ -115,6 +148,7 @@ nav ul li a:hover {
     margin: 10px 0;
     color: #555;
     text-align: center;
+    font-size: 1.0rem; /* Smaller font size for the PhD title */
 }
 
 /* Contact Info & Social Links */
@@ -140,7 +174,7 @@ nav ul li a:hover {
 /* Styled Quote */
 .styled-quote {
     font-style: italic;
-    font-size: 1rem;
+    font-size: 1.2rem; /* Increased size for the quote text */
     color: #666;
     padding: 15px 20px;
     border-left: 5px solid #007acc;
@@ -151,14 +185,35 @@ nav ul li a:hover {
     font-family: 'Georgia', serif;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     max-width: 80%;
+    border-radius: 10px;
 }
 
-@media (max-width: 768px) {
+.styled-quote span {
+    font-size: 0.9rem; /* Keeps the name size the same */
+    font-style: italic;
+    color: #333; /* Slightly darker color for contrast */
+    display: block;
+    margin-top: 10px; /* Adds a bit of space between the quote and the name */
+}
+
+@media (max-width: 1100px) {
     .styled-quote {
-        font-size: 0.9rem;
+        font-size: 1.1rem; /* Adjusted for smaller screens */
         padding: 10px 15px;
         max-width: 100%;
+        border-radius: 8px;
     }
+
+    .styled-quote span {
+        font-size: 0.9rem; /* Consistent name size on smaller screens */
+    }
+}
+
+
+/* About Me Biography Text */
+.section#about-me p {
+    font-size: 1.1rem; /* Smaller font size for the About Me biography text */
+    line-height: 1.4; /* Adjust line-height for better spacing */
 }
 
 .profile-details {
@@ -184,7 +239,7 @@ nav ul li a:hover {
     color: #555;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1100px) {
     .research-section h3 {
         font-size: 1.3rem;
     }
@@ -241,7 +296,7 @@ nav ul li a:hover {
     font-style: italic;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1100px) {
     .date-posted {
         position: static;
         display: block;
@@ -257,11 +312,11 @@ nav ul li a:hover {
 
 /* Right Column Sections */
 .section h2 {
-    font-size: 1.5rem;
-    margin-bottom: 20px;
+    font-size: 1.5rem; /* Large, clear section titles */
+    margin-top: 0rem; /* Reduce space above the title */
+    margin-bottom: 1.25rem; /* Reduce gap between title and content */
     color: #007acc;
 }
-
 .section ul {
     list-style: none;
     padding: 0;
@@ -283,7 +338,7 @@ nav ul li a:hover {
     color: #007acc;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1100px) {
     .section ul li {
         padding-right: 10px;
     }
@@ -357,7 +412,7 @@ footer p {
 }
 
 /* Mobile Responsiveness */
-@media (max-width: 768px) {
+@media (max-width: 1100px) {
     .main-content {
         flex-direction: column;
     }
@@ -421,68 +476,69 @@ footer p {
     }
 }
 
+/* Blog Post Title */
+.post-title {
+    font-size: 2.5rem; /* Large title */
+    margin-bottom: 0.2rem;
+}
 
-/* General Navigation Styles */
-nav ul {
-    list-style: none;
+.post-title a {
+    text-decoration: none; /* Remove underline */
+    color: #007acc;
     display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
+    align-items: center;
 }
 
-nav ul li a {
-    color: #333;
-    text-decoration: none;
-    font-weight: bold;
-    padding: 10px 15px;
+.post-title i {
+    font-size: 2.0rem; /* Adjust icon size */
+    margin-left: 1rem; /* Increase space between text and icon */
+    vertical-align: middle; /* Ensure proper alignment with the text */
 }
 
-nav ul li a:hover {
+/* Author Info */
+.author-info {
+    margin-bottom: 0.7rem;
+}
+
+.name-and-date {
+    display: flex;
+    align-items: center;
+    gap: 1rem; /* Space between name and date */
+}
+
+.author-name {
+    font-size: 1.3rem; /* Larger font for the name */
+    margin: 0;
+}
+
+.post-date {
+    font-size: 1.0rem; /* Smaller font for the date */
+    margin: 0;
+}
+
+.author-bio {
+    font-size: 1.0rem; /* Same size as the date */
+    margin-top: 0.05rem; /* Slight space between bio and name/date */
+}
+
+/* Section Titles */
+h2 {
+    font-size: 1.5rem; /* Large, clear section titles */
+    margin-top: 2rem;
+    margin-bottom: 0.1rem; /* Reduce gap between title and content */
     color: #007acc;
 }
 
-/* Hamburger Menu Icon */
-.menu-icon {
-    display: none;
-    font-size: 2rem;
-    cursor: pointer;
+/* Paragraphs */
+p {
+    margin-top: 0.2rem; /* Reduce gap between paragraphs */
+    font-size: 1.25rem;
+    line-height: 1.6;
 }
 
-@media (max-width: 768px) {
-    /* Hide the nav links initially on mobile */
-    nav ul {
-        flex-direction: column;
-        align-items: flex-start;
-        display: none;
-    }
-
-    /* Show the menu icon on mobile */
-    .menu-icon {
-        display: block;
-        color: #333;
-        text-align: right;
-        margin-right: 20px;
-    }
-
-    /* Show the nav links when the menu is toggled */
-    nav ul.show-menu {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        width: 100%;
-    }
-
-    nav ul li {
-        width: 100%;
-        text-align: left;
-        margin: 0;
-    }
-
-    nav ul li a {
-        display: block;
-        width: 100%;
-        padding: 15px;
-        border-bottom: 1px solid #EAE6DA;
-    }
+/* Smaller Copyright Text */
+.copyright {
+    font-size: 1.2rem; /* Smaller font size */
+    color: #777; /* Optional: Lighter color for subtle appearance */
+    text-align: center; /* Optional: Center the text */
 }
