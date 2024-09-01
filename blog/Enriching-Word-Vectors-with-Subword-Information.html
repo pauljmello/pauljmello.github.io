@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enriching Word Vectors with Subword Information</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <nav>
+                <div class="menu-icon" id="menu-icon">
+                    &#9776; <!-- This is the hamburger icon -->
+                </div>
+                <ul id="nav-links">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../all-blogs.html">Blogs</a></li>
+                    <li><a href="../all-projects.html">Projects</a></li>
+                    <li><a href="../all-publications.html">Publications</a></li>
+                    <li><a href="../assets/pdfs/Paul Mello - Resume.pdf" target="_blank">Resume</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="container">
+            <!-- Blog Post Title with Hyperlink and Larger Icon -->
+            <h1 class="post-title">
+                <a href="https://arxiv.org/pdf/1607.04606" target="_blank">
+                    Enriching Word Vectors with Subword Information <i class="fas fa-file-alt"></i>
+                </a>
+            </h1>
+            
+            <div class="author-info">
+                <div class="name-and-date">
+                    <h2 class="author-name">Paul Jason Mello</h2>
+                    <p class="post-date">August 31, 2024</p>
+                </div>
+            </div>
+
+            <!-- Key Words-->
+            <h2>Key Words</h2>
+            <p><b>[Morphology]</b> is the study of how words are constructed by analyzing their structures and relation to other words.</p>
+            <p><b>[Skipgram]</b> are a model which learn its item embeddings through the immediate local context. Effectively, defining each word by their contextual relationship to one another.</p>
+            <p><b>[n-gram]</b> consist of 'n' items where n represents the number of prior and future items to be used to represent a complete item.</p>
+
+            <!-- Single Sentence Description -->
+            <h2>Quick Description</h2>
+            <p>Recognizing the then current limitations of atomic continuous word representations in vectorization, the authors demonstrate the effectiveness of utilizing subword characters to encode the morphological structures of word, 
+                boosting model comprehension across all tested languages, especially in rich morphological languages like turkish, resulting in SOTA results.</p>
+
+            <!-- Abstract -->
+            <h2>Abstract</h2>
+            <p>This paper presents a novel extension to the Skipgram model where each word is represented as a bag of character n-grams. 
+                The summation of these n-grams develop robust representations which allow the model to extrapolate to rare or unseen words. 
+                They utilize many evaluation techniques and demonstrate their model achieves SOTA results across various languages and metrics when trained on full or partial data, in this case wikipedia. 
+            </p>
+            
+            <!-- Main Contributions -->
+            <h2>Main Contributions</h2>
+            <p>Proposed subword character n-grams vectors to improve comprehension of word representations.</p>
+            <p>Prior approaches have innately included morphological decompositions, but the authors here do not rely on baking these methods in.</p>
+
+            <h2>General Comprehension</h2>
+            <p>This paper, originally published in 2016, identified limitations in natural language processing techniques brought on by complex development of language over time. 
+                They propose breaking down words into n-gram models, that also include the word itself, which seek to provide greater context for vectorization as compared to Skipgram, which utilizes unique vectors that ignore the internal structure of words. 
+                The authors utilize wikipedia articles from multiple languages, mostly based in latin, as training data and preprocess them to distinguish prefixes and suffixes from other characters.
+                Each genertaed n-gram (<span>\(g\)</span>) becomes a vector (<span>\(\mathbf{z}_g\)</span>) which allows for training on the following score function:</p>
+
+                <p style="text-align: center;">
+                    \[
+                      s(w, c) = \sum_{{g \in G_w}} \mathbf{z}_g^\top \mathbf{v}_c
+                    \]
+                </p>
+
+            <p>
+                Here, the authors map pairs of words (<span>\(w\)</span>) with contexts (<span>\(c\)</span>) to generate a score. 
+                Notably, the authors utilize a 300 dimension vector to represent words, set the n in n-grams between <span>\(\mathbf{3 \leq n \leq 6}\)</span> to capture sufficient, but not excessive information, and sample five negatives which are replaced with null vectors for each positive sample taken. 
+                To invoke better generalization, their model samples five negatives for each positive, and replace the negatives with null vectors.
+                These choices among others result in a 1.5x slow down compared to the baseline Skipgram model, even despite utilizing hashing functions for memory optimization, and asynchronous parallel stochastic gradient descent on the negative log likelihood.
+                However, these result generalize very well to unseen data and even when the dataset is small.
+                They find particular success in non-latin training languages such as Arabic, German, and Russian where words are often compounded or share meaning.
+                They demonstrate consistently better results when compared to prior SOTA methodologies, especially as n is increased.
+            </p>
+
+            <h2>Final Thoughts</h2>
+            <p>
+                The concepts and ideas represented in this paper mostly amount to improving data quality through arbitrary structures. 
+                By providing their model with additional data, in this case the subword decompositions, they effectively increase the information quantity for each vector representation, resulting in better models capable of out-of-distribution prediction. 
+                This extra decompositions yield particularly good results in morphologically rich languages where word forms can vary significantly to express complex grammatical relationships within the context of sentences such as, gender, mood, or tense.
+                Today, these methods are considered obsolete due to incontext learners such as the transformer model proposed in the 2017 paper "<a href="https://arxiv.org/pdf/1706.03762" target="_blank">Attention Is All You Need</a>".
+            </p>
+
+            <h2>Notable References</h2>
+            <p>
+            <a href="https://arxiv.org/pdf/1301.3781" target="_blank">Efficient Estimation of Word Representations in Vector Space</a>
+            </p>
+        </section>
+    </main>
+    
+
+    <footer>
+        <div class="container">
+            <p class="copyright">&copy; 2024 Paul Jason Mello</p>
+                <div class="social-links">
+                <a href="https://x.com/pauljmello">Twitter</a> | 
+                <a href="https://www.linkedin.com/in/pauljasonmello/">LinkedIn</a> | 
+                <a href="https://github.com/pauljmello">GitHub</a> | 
+                <a href="https://scholar.google.com/citations?user=AuGAXRwAAAAJ&hl=en&oi=ao" target="_blank">Google Scholar</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../assets/js/script.js"></script>
+
+</body>
+</html>

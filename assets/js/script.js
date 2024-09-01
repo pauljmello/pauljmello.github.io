@@ -46,3 +46,22 @@ document.getElementById('menu-icon').onclick = function() {
         navLinks.classList.add('show-menu');
     }
 };
+
+/* Script to manage contrast for older monitors */
+function applyHighContrastIfNeeded() {
+    const screenWidth = window.screen.width;
+    const screenHeight = window.screen.height;
+    const pixelDensity = window.devicePixelRatio || 1;
+    const colorDepth = window.screen.colorDepth || 24; // Usually 24 or 32 bits
+
+    // Conditions to identify older screens
+    const lowResolution = (screenWidth < 1280 || screenHeight < 720); 
+    const lowPixelDensity = (pixelDensity < 1.5); 
+    const lowColorDepth = (colorDepth < 24);
+
+    if (lowResolution || lowPixelDensity || lowColorDepth) {
+        document.body.classList.add('high-contrast'); // Add a class to apply high contrast styles
+    }
+}
+
+applyHighContrastIfNeeded();

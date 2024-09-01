@@ -5,10 +5,11 @@
     box-sizing: border-box;
 }
 
+/* Body Styling */
 body {
     font-family: 'Helvetica Neue', Arial, sans-serif;
     line-height: 1.6;
-    background-color: #f4f4f4;
+    background-color: #fff;
     color: #333;
 }
 
@@ -20,11 +21,11 @@ body {
     padding: 20px 0;
 }
 
-/* Header */
+/* Header Styling */
 header {
     background: #fff;
     padding: 10px 0;
-    /* Removed border-bottom */
+    /* Removed border-bottom for cleaner look */
 }
 
 /* General Navigation Styles */
@@ -54,8 +55,8 @@ nav ul li a:hover {
     cursor: pointer;
 }
 
+/* Responsive Styles for Mobile */
 @media (max-width: 1100px) {
-    /* Show the menu icon on mobile devices */
     .menu-icon {
         display: block;
         color: #333;
@@ -63,14 +64,12 @@ nav ul li a:hover {
         margin-right: 20px;
     }
 
-    /* Hide the navigation links initially on mobile */
     nav ul {
         flex-direction: column;
         align-items: flex-start;
         display: none;
     }
 
-    /* Show the navigation links when the menu is toggled */
     nav ul.show-menu {
         display: flex;
         flex-direction: column;
@@ -92,7 +91,7 @@ nav ul li a:hover {
     }
 }
 
-/* Main Content */
+/* Main Content Section */
 .main-content {
     display: flex;
     gap: 20px;
@@ -110,14 +109,15 @@ nav ul li a:hover {
     flex: 4; /* Adjust the right column to maintain balance */
 }
 
+/* Responsive Columns on Mobile */
 @media (max-width: 1100px) {
     .left-column, .right-column {
-        max-width: 100%; /* Ensure full width on mobile */
-        flex: 1; /* Equalize flex on mobile */
+        max-width: 100%;
+        flex: 1;
     }
 }
 
-/* Profile Section */
+/* Profile Section Styling */
 .profile-section,
 .section,
 .education-section,
@@ -127,9 +127,10 @@ nav ul li a:hover {
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
-    /* Removed border-left */
+    border: 1px solid #007acc; /* Standard border for all sections */
 }
 
+/* Profile Picture */
 .profile-picture img {
     width: 100%;
     max-width: 250px;
@@ -138,6 +139,7 @@ nav ul li a:hover {
     margin: 0 auto 20px;
 }
 
+/* Profile Details */
 .profile-details h1 {
     font-size: 2.0rem;
     color: #007acc;
@@ -148,7 +150,7 @@ nav ul li a:hover {
     margin: 10px 0;
     color: #555;
     text-align: center;
-    font-size: 1.0rem; /* Smaller font size for the PhD title */
+    font-size: 1.0rem;
 }
 
 /* Contact Info & Social Links */
@@ -171,10 +173,10 @@ nav ul li a:hover {
     text-decoration: underline;
 }
 
-/* Styled Quote */
+/* Styled Quote Section */
 .styled-quote {
     font-style: italic;
-    font-size: 1.2rem; /* Increased size for the quote text */
+    font-size: 1.2rem;
     color: #666;
     padding: 15px 20px;
     border-left: 5px solid #007acc;
@@ -189,31 +191,31 @@ nav ul li a:hover {
 }
 
 .styled-quote span {
-    font-size: 0.9rem; /* Keeps the name size the same */
+    font-size: 0.9rem;
     font-style: italic;
-    color: #333; /* Slightly darker color for contrast */
+    color: #333;
     display: block;
-    margin-top: 10px; /* Adds a bit of space between the quote and the name */
+    margin-top: 10px;
 }
 
+/* Responsive Styled Quote */
 @media (max-width: 1100px) {
     .styled-quote {
-        font-size: 1.1rem; /* Adjusted for smaller screens */
+        font-size: 1.1rem;
         padding: 10px 15px;
         max-width: 100%;
         border-radius: 8px;
     }
 
     .styled-quote span {
-        font-size: 0.9rem; /* Consistent name size on smaller screens */
+        font-size: 0.9rem;
     }
 }
 
-
 /* About Me Biography Text */
 .section#about-me p {
-    font-size: 1.1rem; /* Smaller font size for the About Me biography text */
-    line-height: 1.4; /* Adjust line-height for better spacing */
+    font-size: 1.1rem;
+    line-height: 1.4;
 }
 
 .profile-details {
@@ -239,6 +241,7 @@ nav ul li a:hover {
     color: #555;
 }
 
+/* Responsive Research Section */
 @media (max-width: 1100px) {
     .research-section h3 {
         font-size: 1.3rem;
@@ -253,7 +256,7 @@ nav ul li a:hover {
     }
 }
 
-/* Education List */
+/* Education List Styling */
 .education-list.no-bullets {
     list-style: none;
     margin-left: 0;
@@ -296,6 +299,7 @@ nav ul li a:hover {
     font-style: italic;
 }
 
+/* Responsive Date Styling */
 @media (max-width: 1100px) {
     .date-posted {
         position: static;
@@ -312,11 +316,13 @@ nav ul li a:hover {
 
 /* Right Column Sections */
 .section h2 {
-    font-size: 1.5rem; /* Large, clear section titles */
-    margin-top: 0rem; /* Reduce space above the title */
-    margin-bottom: 1.25rem; /* Reduce gap between title and content */
+    font-size: 1.5rem;
+    margin-top: 0rem;
+    margin-bottom: 1.25rem;
     color: #007acc;
 }
+
+/* List Styling in Sections */
 .section ul {
     list-style: none;
     padding: 0;
@@ -338,6 +344,7 @@ nav ul li a:hover {
     color: #007acc;
 }
 
+/* Responsive Right Column */
 @media (max-width: 1100px) {
     .section ul li {
         padding-right: 10px;
@@ -378,6 +385,7 @@ nav ul li a:hover {
     text-decoration: underline;
 }
 
+/* Show More Container */
 .show-more-container {
     display: flex;
     justify-content: space-between;
@@ -399,11 +407,11 @@ nav ul li a:hover {
     max-height: 500px;
 }
 
-/* Footer */
+/* Footer Styling */
 footer {
     background: #fff;
     padding: 20px 0;
-    border-top: 1px solid #eaeaea;
+    /* Removed border-top for cleaner look */
     text-align: center;
 }
 
@@ -445,6 +453,7 @@ footer p {
     }
 }
 
+/* Smaller Screen Adjustments */
 @media (max-width: 480px) {
     nav ul {
         gap: 5px;
@@ -476,23 +485,23 @@ footer p {
     }
 }
 
-/* Blog Post Title */
+/* Blog Post Title Styling */
 .post-title {
-    font-size: 2.5rem; /* Large title */
+    font-size: 2.5rem;
     margin-bottom: 0.2rem;
 }
 
 .post-title a {
-    text-decoration: none; /* Remove underline */
+    text-decoration: none;
     color: #007acc;
     display: flex;
     align-items: center;
 }
 
 .post-title i {
-    font-size: 2.0rem; /* Adjust icon size */
-    margin-left: 1rem; /* Increase space between text and icon */
-    vertical-align: middle; /* Ensure proper alignment with the text */
+    font-size: 2.0rem;
+    margin-left: 1rem;
+    vertical-align: middle;
 }
 
 /* Author Info */
@@ -503,42 +512,80 @@ footer p {
 .name-and-date {
     display: flex;
     align-items: center;
-    gap: 1rem; /* Space between name and date */
+    gap: 1rem;
 }
 
 .author-name {
-    font-size: 1.3rem; /* Larger font for the name */
+    font-size: 1.3rem;
     margin: 0;
 }
 
 .post-date {
-    font-size: 1.0rem; /* Smaller font for the date */
+    font-size: 1.0rem;
     margin: 0;
 }
 
 .author-bio {
-    font-size: 1.0rem; /* Same size as the date */
-    margin-top: 0.05rem; /* Slight space between bio and name/date */
+    font-size: 1.0rem;
+    margin-top: 0.05rem;
 }
 
 /* Section Titles */
 h2 {
-    font-size: 1.5rem; /* Large, clear section titles */
+    font-size: 1.5rem;
     margin-top: 2rem;
-    margin-bottom: 0.1rem; /* Reduce gap between title and content */
+    margin-bottom: 0.1rem;
     color: #007acc;
 }
 
 /* Paragraphs */
 p {
-    margin-top: 0.2rem; /* Reduce gap between paragraphs */
+    margin-top: 0.2rem;
     font-size: 1.25rem;
     line-height: 1.6;
 }
 
-/* Smaller Copyright Text */
+/* Copyright Text */
 .copyright {
-    font-size: 1.2rem; /* Smaller font size */
-    color: #777; /* Optional: Lighter color for subtle appearance */
-    text-align: center; /* Optional: Center the text */
+    font-size: 1.2rem;
+    color: #777;
+    text-align: center;
+}
+
+/* Improved UI for older screens */
+.section,
+.profile-section,
+.education-section,
+.research-section {
+    border: 1px solid #007acc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* High contrast styles for older screens */
+.high-contrast .section,
+.high-contrast .profile-section,
+.high-contrast .education-section,
+.high-contrast .research-section {
+    border: 2px solid #0055aa;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Coming Soon Message Container */
+.coming-soon-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(50vh - 0px);
+    padding: 20px;
+}
+
+#coming-soon-message {
+    text-align: center;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
 }
