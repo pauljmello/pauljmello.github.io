@@ -37,15 +37,37 @@ nav ul {
     flex-wrap: wrap;
 }
 
+nav ul li {
+    position: relative; /* Needed for the underline positioning */
+}
+
 nav ul li a {
     color: #333;
     text-decoration: none;
     font-weight: bold;
     padding: 10px 15px;
+    position: relative; /* Needed for the pseudo-element */
 }
 
-nav ul li a:hover {
-    color: #007acc;
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0px; /* Position the underline just below the text */
+    width: 100%;
+    height: 2px; /* Thickness of the underline */
+    background-color: transparent; /* Start with no underline */
+    transition: background-color 0.3s ease, width 0.3s ease;
+}
+
+nav ul li a:hover::after {
+    background-color: #007acc; /* Underline color on hover */
+    width: 100%; /* Ensure the underline spans the full width */
+}
+
+nav ul li.active a::after {
+    background-color: #007acc; /* Underline color for active section */
+    width: 100%; /* Ensure the underline spans the full width */
 }
 
 /* Hamburger Menu Icon */
@@ -130,13 +152,20 @@ nav ul li a:hover {
     border: 1px solid #007acc; /* Standard border for all sections */
 }
 
-/* Profile Picture */
+.profile-picture {
+    padding: 20px 10px 20px 10px; /* Top, Right, Bottom, Left */
+}
+
+
 .profile-picture img {
-    width: 100%;
-    max-width: 250px;
-    border-radius: 50%;
+    width: 90%; /* Ensures it takes up the full width of the container */
+    max-width: 400px; /* Adjust to control the maximum size */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Adjust to make corners rounded */
     display: block;
-    margin: 0 auto 20px;
+    margin: 0 auto;
+    object-fit: cover; /* Ensures the image scales correctly */
+    border: 2px solid #0055aa; /* Thin border around the image */
 }
 
 /* Profile Details */
@@ -150,7 +179,7 @@ nav ul li a:hover {
     margin: 10px 0;
     color: #555;
     text-align: center;
-    font-size: 1.0rem;
+    font-size: 1rem;
 }
 
 /* Contact Info & Social Links */
@@ -198,6 +227,10 @@ nav ul li a:hover {
     margin-top: 10px;
 }
 
+.no-italics {
+    font-style: normal;   
+}
+
 /* Responsive Styled Quote */
 @media (max-width: 1100px) {
     .styled-quote {
@@ -214,7 +247,7 @@ nav ul li a:hover {
 
 /* About Me Biography Text */
 .section#about-me p {
-    font-size: 1.1rem;
+    font-size: 1rem;
     line-height: 1.4;
 }
 
@@ -270,16 +303,20 @@ nav ul li a:hover {
     padding-right: 100px;
 }
 
+/* Subsection Styling */
 .education-list.no-bullets ul {
     margin-top: 5px;
     margin-left: 20px;
+    list-style-type: disc; /* Ensure bullets are added here */
 }
 
+/* Style for subsection items */
 .education-list.no-bullets ul li {
     margin-bottom: 5px;
-    list-style: none;
+    list-style: disc; /* Ensure bullet points are visible */
 }
 
+/* Link Styling in subsections */
 .education-list.no-bullets ul li a {
     color: #007acc;
     text-decoration: none;
@@ -289,13 +326,14 @@ nav ul li a:hover {
     text-decoration: underline;
 }
 
+
 /* Date Styling */
 .date-posted {
     position: absolute;
     right: 0;
     top: 0;
     color: #666;
-    font-size: 0.9rem;
+    font-size: .9rem;
     font-style: italic;
 }
 
@@ -521,12 +559,12 @@ footer p {
 }
 
 .post-date {
-    font-size: 1.0rem;
+    font-size: 1rem;
     margin: 0;
 }
 
 .author-bio {
-    font-size: 1.0rem;
+    font-size: 1rem;
     margin-top: 0.05rem;
 }
 
@@ -547,7 +585,7 @@ p {
 
 /* Copyright Text */
 .copyright {
-    font-size: 1.2rem;
+    font-size: 1rem;
     color: #777;
     text-align: center;
 }

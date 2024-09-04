@@ -4,10 +4,10 @@ function toggleBlogList() {
 
     if (hiddenLinks.classList.contains("expanded")) {
         hiddenLinks.classList.remove("expanded");
-        button.textContent = "See more...";
+        button.textContent = "Show";
     } else {
         hiddenLinks.classList.add("expanded");
-        button.textContent = "See less...";
+        button.textContent = "Hide";
     }
 }
 
@@ -17,10 +17,10 @@ function toggleProjectList() {
 
     if (hiddenLinks.classList.contains("expanded")) {
         hiddenLinks.classList.remove("expanded");
-        button.textContent = "See more...";
+        button.textContent = "Show";
     } else {
         hiddenLinks.classList.add("expanded");
-        button.textContent = "See less...";
+        button.textContent = "Hide";
     }
 }
 
@@ -30,10 +30,10 @@ function togglePublicationList() {
 
     if (hiddenLinks.classList.contains("expanded")) {
         hiddenLinks.classList.remove("expanded");
-        button.textContent = "See more...";
+        button.textContent = "Show";
     } else {
         hiddenLinks.classList.add("expanded");
-        button.textContent = "See less...";
+        button.textContent = "Hide";
     }
 }
 
