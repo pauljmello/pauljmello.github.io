@@ -8,7 +8,7 @@ Hi I'm Paul Jason Mello, a PhD student at the University of Nevada, Reno, specia
 ### Academic Background
 
 
-Education is the cornerstone of my sense of self. I began my academic career in 2016 studying computer science at California State University, Sacramento where I found an intrest in machine learning, mathematics, and notably philosophy. Following my time at Sac State, in 2021, I entered my masters in artificial inteligence at San Jose State University where I studied the intersection of information theory, deep neural networks, and denoising diffusion probabilistic models under the guidance of the phenomenal mentor Dr. Stas Tiomkin. With my passion for artificial intelligence driving me, I began my doctorate in 2024 at the University of Nevada, Reno studying computer science and engieering under the supervision of Dr. Emily Hand. 
+Education is the cornerstone of my sense of self. I began my academic career in 2016 studying computer science at California State University, Sacramento where I found an interest in machine learning, mathematics, and notably philosophy. Following my time at Sac State, in 2021, I entered my masters in artificial intelligence at San Jose State University where I studied the intersection of information theory, deep neural networks, and denoising diffusion probabilistic models under the guidance of the phenomenal mentor Dr. Stas Tiomkin. With my passion for artificial intelligence driving me, I began my doctorate in 2024 at the University of Nevada, Reno studying computer science and engineering under the supervision of Dr. Emily Hand. 
 
 
 ### Research Interests
