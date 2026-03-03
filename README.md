@@ -73,4 +73,4 @@ I'm always open to collaborations, discussions, or simply connecting with like-m
 
 - **GitHub**: [pauljmello](https://github.com/pauljmello)
 
-- **Website**: [pauljmello.github.io/](https://pauljmello.github.io/)
+- **Website**: [pauljmello.com/](https://https://pauljmello.com/)
