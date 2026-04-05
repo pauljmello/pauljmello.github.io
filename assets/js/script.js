@@ -1,66 +1,41 @@
-function toggleBlogList() {
-    var hiddenLinks = document.getElementById("blog-hidden-links");
-    var button = document.querySelector("#blogs .show-more");
+function toggleList(sectionId, hiddenId) {
+    var hiddenLinks = document.getElementById(hiddenId);
+    var button = document.querySelector("#" + sectionId + " .show-more");
+
+    if (!hiddenLinks) return;
 
     if (hiddenLinks.classList.contains("expanded")) {
+        hiddenLinks.style.overflow = "hidden";
+        hiddenLinks.style.maxHeight = hiddenLinks.scrollHeight + "px";
+        hiddenLinks.offsetHeight;
+        hiddenLinks.style.maxHeight = "0";
         hiddenLinks.classList.remove("expanded");
         button.textContent = "Show";
     } else {
+        hiddenLinks.style.maxHeight = hiddenLinks.scrollHeight + "px";
         hiddenLinks.classList.add("expanded");
+        hiddenLinks.addEventListener("transitionend", function handler() {
+            if (hiddenLinks.classList.contains("expanded")) {
+                hiddenLinks.style.maxHeight = "none";
+            }
+            hiddenLinks.removeEventListener("transitionend", handler);
+        });
         button.textContent = "Hide";
     }
 }
 
-function toggleProjectList() {
-    var hiddenLinks = document.getElementById("project-hidden-links");
-    var button = document.querySelector("#projects .show-more");
-
-    if (hiddenLinks.classList.contains("expanded")) {
-        hiddenLinks.classList.remove("expanded");
-        button.textContent = "Show";
-    } else {
-        hiddenLinks.classList.add("expanded");
-        button.textContent = "Hide";
-    }
-}
-
-function togglePublicationList() {
-    var hiddenLinks = document.getElementById("publication-hidden-links");
-    var button = document.querySelector("#publication .show-more");
-
-    if (hiddenLinks.classList.contains("expanded")) {
-        hiddenLinks.classList.remove("expanded");
-        button.textContent = "Show";
-    } else {
-        hiddenLinks.classList.add("expanded");
-        button.textContent = "Hide";
-    }
-}
-
-// Toggle the navigation menu
 document.getElementById('menu-icon').onclick = function() {
-    var navLinks = document.getElementById('nav-links');
-    if (navLinks.classList.contains('show-menu')) {
-        navLinks.classList.remove('show-menu');
-    } else {
-        navLinks.classList.add('show-menu');
-    }
+    document.getElementById('nav-links').classList.toggle('show-menu');
 };
 
-/* Script to manage contrast for older monitors */
+/* Apply high contrast styles for older screens */
 function applyHighContrastIfNeeded() {
-    const screenWidth = window.screen.width;
-    const screenHeight = window.screen.height;
-    const pixelDensity = window.devicePixelRatio || 1;
-    const colorDepth = window.screen.colorDepth || 24; // Usually 24 or 32 bits
+    var colorDepth = window.screen.colorDepth || 24;
+    var lowResolution = (window.screen.width < 1280 || window.screen.height < 720);
+    var lowColorDepth = (colorDepth < 24);
 
-    // Conditions to identify older screens
-    const lowResolution = (screenWidth < 1280 || screenHeight < 720); 
-    const lowPixelDensity = (pixelDensity < 1.5); 
-    const lowColorDepth = (colorDepth < 24);
-
-    if (lowResolution || lowPixelDensity || lowColorDepth) {
-        document.body.classList.add('high-contrast'); // Add a class to apply high contrast styles
+    if (lowResolution || lowColorDepth) {
+        document.body.classList.add('high-contrast');
     }
 }
 
