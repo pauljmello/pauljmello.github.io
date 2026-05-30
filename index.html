@@ -68,11 +68,11 @@
         <div class="container">
             <nav>
                 <div class="menu-icon" id="menu-icon">
-                    &#9776; <!-- This is the hamburger icon -->
+                    &#9776;
                 </div>
                 <ul id="nav-links">
                     <li class="active"><a href="index.html">Home</a></li>
-                    <li><a href="all-blogs.html">Blogs</a></li>
+                    <li><a href="all-writings.html">Writings</a></li>
                     <li><a href="all-projects.html">Projects</a></li>
                     <li><a href="all-publications.html">Publications</a></li>
                     <li><a href="assets/pdfs/Paul%20Mello%20-%20Resume.pdf" target="_blank">Resume</a></li>
@@ -138,112 +138,147 @@
                     </p>
                 </section>
 
-                <section id="blogs" class="section">
-                    <h2>Blogs</h2>
-                    <ul class="blog-list">
-                         <li>
-                            <a href="assets/pdfs/[ESN%20Research]%20Echo%20State%20Networks.pdf" target="_blank">
-                                [ESN Research] Echo State Networks</a>
-                             <span class="date-posted">[November 1, 2025]</span>
-                        </li>
-                        <li>
-                            <a href="assets/pdfs/[LTCN%20Research]%20Liquid%20Time-Constant%20Networks.pdf" target="_blank">
-                                [LTCN Research] Liquid Time-Constant Networks</a>
-                            <span class="date-posted">[June 2, 2025]</span>
-                         </li>
-                        <li class="hidden-links" id="blog-hidden-links">
-                            <ul>
-                                <li>
-                                    <a href="assets/pdfs/[Sheaf%20Research]%20Sheaf%20Neural%20Networks%20Research%20Paper.pdf" target="_blank">
-                                        [SNN Research] Sheaf Neural Networks</a>
-                                    <span class="date-posted">[May 19, 2025]</span>
-                                </li>
-                                <li>
-                                    <a href="assets/pdfs/[Thoughts%20On]%20Tweedie's%20Formula.pdf" target="_blank">
-                                        [Thoughts On] Tweedie's Formula</a>
-                                    <span class="date-posted">[May 16, 2025]</span>
-                                </li>
-                                <li>
-                                    <a href="assets/pdfs/[Pre-Print]%20Perturbation%20Driven%20Generalization.pdf" target="_blank">
-                                        [Noise Research] Perturbation Driven Generalization</a>
-                                    <span class="date-posted">[May 5, 2025]</span>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
-                    <div class="show-more-container">
-                        <button class="show-more" onclick="toggleList('blogs', 'blog-hidden-links')">Show</button>
-                        <div class="view-all">
-                            <a href="all-blogs.html">View More Blogs</a>
-                        </div>
-                    </div>
-                </section>
-
-
-                <section id="projects" class="section">
+                <section id="projects" class="section section-preview">
                     <h2>Projects</h2>
-                    <ul class="project-list">
-                        <li>
-                            <a href="https://github.com/pauljmello/CatDL-Categorical-Deep-Learning" target="_blank">
-                                [Category Theory] Categorical Deep Learning</a>
-                            <span class="date-posted">[April 1, 2026]</span>
+                    <ul class="item-grid">
+                        <li class="item-card" data-type="research">
+                            <div class="item-card-thumb" data-template="categorical"></div>
+                            <div class="item-card-body">
+                                <div class="item-card-meta">
+                                    <span class="chip chip-research">Research</span>
+                                    <span class="date">Apr 1, 2026</span>
+                                </div>
+                                <h3>Categorical Deep Learning</h3>
+                                <p class="summary">A deep learning framework built from categorical first principles.</p>
+                                <div class="item-card-links">
+                                    <a href="https://github.com/pauljmello/CatDL-Categorical-Deep-Learning" target="_blank">View Code &rarr;</a>
+                                </div>
+                            </div>
                         </li>
-                        <li>
-                            <a href="https://github.com/pauljmello/Fourier-Transforms" target="_blank">
-                                [Fourier Research] Fourier Transforms</a>
-                            <span class="date-posted">[January 12, 2026]</span>
+                        <li class="item-card" data-type="research">
+                            <div class="item-card-thumb" data-template="waves"></div>
+                            <div class="item-card-body">
+                                <div class="item-card-meta">
+                                    <span class="chip chip-research">Research</span>
+                                    <span class="date">Jan 12, 2026</span>
+                                </div>
+                                <h3>Fourier Transforms</h3>
+                                <p class="summary">Implementing and visualizing the Fourier transform from scratch.</p>
+                                <div class="item-card-links">
+                                    <a href="https://github.com/pauljmello/Fourier-Transforms" target="_blank">View Code &rarr;</a>
+                                </div>
+                            </div>
                         </li>
-                        <li class="hidden-links" id="project-hidden-links">
-                            <ul>
-                                <li>
-                                    <a href="https://github.com/pauljmello/Echo-State-Networks" target="_blank">
-                                        [ESN Implementation] Echo State Networks</a>
-                                    <span class="date-posted">[November 1, 2025]</span>
-                                </li>
-                                <li>
-                                    <a href="https://github.com/pauljmello/Transformer-Attention-Bench" target="_blank">
-                                        [Attention Research] Transformer Attention Bench</a>
-                                    <span class="date-posted">[October 29, 2025]</span>
-                                </li>
-                                <li>
-                                    <a href="https://github.com/pauljmello/Random-Matrix-Theory" target="_blank">
-                                        [Matrix Research] Random Matrix Theory</a>
-                                    <span class="date-posted">[August 29, 2025]</span>
-                                </li>
-                            </ul>
+                        <li class="item-card" data-type="research">
+                            <div class="item-card-thumb" data-template="attention"></div>
+                            <div class="item-card-body">
+                                <div class="item-card-meta">
+                                    <span class="chip chip-research">Research</span>
+                                    <span class="date">Oct 29, 2025</span>
+                                </div>
+                                <h3>Transformer Attention Bench</h3>
+                                <p class="summary">Benchmarking suite comparing attention variants across efficiency and accuracy.</p>
+                                <div class="item-card-links">
+                                    <a href="https://github.com/pauljmello/Transformer-Attention-Bench" target="_blank">View Code &rarr;</a>
+                                </div>
+                            </div>
                         </li>
                     </ul>
-                    <div class="show-more-container">
-                        <button class="show-more" onclick="toggleList('projects', 'project-hidden-links')">Show</button>
-                        <div class="view-all">
-                            <a href="all-projects.html">View More Projects</a>
-                        </div>
-                    </div>
+                    <div class="view-more"><a href="all-projects.html">View More Projects &rarr;</a></div>
                 </section>
 
-
-                <section id="publications" class="section">
+                <section id="publications" class="section section-preview">
                     <h2>Publications</h2>
-                    <ul class="publication-list">
-                        <li>
-                            <a href="assets/pdfs/An%20Exploration%20of%20Information%20Processing%20in%20Diffusion%20Models.pdf" target="_blank">
-                                [Master's Thesis] An Exploration of Information Processing in Diffusion Models</a>
-                            <span class="date-posted">[August 16, 2024]</span>
+                    <ul class="item-grid">
+                        <li class="item-card pub-card" data-type="thesis">
+                            <div class="item-card-thumb" data-template="information"></div>
+                            <div class="item-card-body">
+                                <div class="item-card-meta">
+                                    <span class="chip chip-thesis">Master's Thesis</span>
+                                    <span class="date">Aug 16, 2024</span>
+                                </div>
+                                <h3>An Exploration of Information Processing in Diffusion Models</h3>
+                                <p class="authors"><strong>Paul Jason Mello</strong></p>
+                                <p class="venue">San José State University · M.S. Thesis</p>
+                                <p class="summary">Information-theoretic analysis of denoising diffusion models.</p>
+                                <div class="item-card-links">
+                                    <a href="assets/pdfs/An%20Exploration%20of%20Information%20Processing%20in%20Diffusion%20Models.pdf" target="_blank">Read Thesis &rarr;</a>
+                                    <a href="https://github.com/pauljmello/ddpm-thesis" target="_blank" class="secondary">View Code &rarr;</a>
+                                </div>
+                            </div>
                         </li>
-                        <li>
-                            <a href="https://ieeexplore.ieee.org/document/10497577" target="_blank">
-                                [IEEE Publication] Multi-Resolution Diffusion for Privacy-Sensitive Recommender Systems</a>
-                            <span class="date-posted">[April 12, 2024]</span>
+                        <li class="item-card pub-card" data-type="ieee">
+                            <div class="item-card-thumb" data-template="stack"></div>
+                            <div class="item-card-body">
+                                <div class="item-card-meta">
+                                    <span class="chip chip-ieee">IEEE</span>
+                                    <span class="date">Apr 12, 2024</span>
+                                </div>
+                                <h3>Multi-Resolution Diffusion for Privacy-Sensitive Recommender Systems</h3>
+                                <p class="authors">Lillenthal et al. <span class="author-role">2nd Author</span></p>
+                                <p class="venue">IEEE Xplore</p>
+                                <p class="summary">Multi-resolution diffusion for privacy-sensitive recommender systems.</p>
+                                <div class="item-card-links">
+                                    <a href="https://ieeexplore.ieee.org/document/10497577" target="_blank">Read Publication &rarr;</a>
+                                    <a href="https://github.com/Multi-resolution-diffusion-recommender/SDRM" target="_blank" class="secondary">View Code &rarr;</a>
+                                </div>
+                            </div>
                         </li>
                     </ul>
-                    <div class="show-more-container">
-                        <button class="show-more" onclick="toggleList('publications', 'publication-hidden-links')">Show</button>
-                        <div class="view-all">
-                            <a href="all-publications.html">View More Publications</a>
-                        </div>
-                    </div>
+                    <div class="view-more"><a href="all-publications.html">View More Publications &rarr;</a></div>
                 </section>
 
+                <section id="writings" class="section section-preview">
+                    <h2>Writings</h2>
+                    <ul class="item-grid">
+                        <li class="item-card" data-type="research">
+                            <div class="item-card-thumb" data-template="reservoir"></div>
+                            <div class="item-card-body">
+                                <div class="item-card-meta">
+                                    <span class="chip chip-research">Research</span>
+                                    <span class="date">Nov 1, 2025</span>
+                                </div>
+                                <h3>Echo State Networks</h3>
+                                <p class="summary">Research on echo state networks and reservoir computing.</p>
+                                <div class="item-card-links">
+                                    <a href="assets/pdfs/[ESN%20Research]%20Echo%20State%20Networks.pdf" target="_blank">Read Report &rarr;</a>
+                                    <a href="https://github.com/pauljmello/Echo-State-Networks" target="_blank" class="secondary">View Code &rarr;</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="item-card" data-type="research">
+                            <div class="item-card-thumb" data-template="prediction"></div>
+                            <div class="item-card-body">
+                                <div class="item-card-meta">
+                                    <span class="chip chip-research">Research</span>
+                                    <span class="date">Jun 2, 2025</span>
+                                </div>
+                                <h3>Liquid Time-Constant Networks</h3>
+                                <p class="summary">Research on continuous-time recurrent networks with adaptive dynamics.</p>
+                                <div class="item-card-links">
+                                    <a href="assets/pdfs/[LTCN%20Research]%20Liquid%20Time-Constant%20Networks.pdf" target="_blank">Read Report &rarr;</a>
+                                    <a href="https://github.com/pauljmello/Liquid-Time-Constant-Networks" target="_blank" class="secondary">View Code &rarr;</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="item-card" data-type="research">
+                            <div class="item-card-thumb" data-template="topology"></div>
+                            <div class="item-card-body">
+                                <div class="item-card-meta">
+                                    <span class="chip chip-research">Research</span>
+                                    <span class="date">May 19, 2025</span>
+                                </div>
+                                <h3>Sheaf Neural Networks</h3>
+                                <p class="summary">Research on sheaf-based graph neural networks.</p>
+                                <div class="item-card-links">
+                                    <a href="assets/pdfs/[Sheaf%20Research]%20Sheaf%20Neural%20Networks%20Research%20Paper.pdf" target="_blank">Read Report &rarr;</a>
+                                    <a href="https://github.com/pauljmello/Sheaf-Neural-Networks" target="_blank" class="secondary">View Code &rarr;</a>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="view-more"><a href="all-writings.html">View More Writings &rarr;</a></div>
+                </section>
 
                 <section id="education" class="section">
                     <h2>Education</h2>

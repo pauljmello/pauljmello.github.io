@@ -54,47 +54,75 @@
     <header>
         <div class="container">
             <nav>
-                <div class="menu-icon" id="menu-icon">
-                    &#9776; <!-- This is the hamburger icon -->
-                </div>
+                <div class="menu-icon" id="menu-icon">&#9776;</div>
                 <ul id="nav-links">
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="all-blogs.html">Blogs</a></li>
+                    <li><a href="all-writings.html">Writings</a></li>
                     <li><a href="all-projects.html">Projects</a></li>
                     <li class="active"><a href="all-publications.html">Publications</a></li>
-                    <li><a href="assets/pdfs/Paul Mello - Resume.pdf" target="_blank">Resume</a></li>
+                    <li><a href="assets/pdfs/Paul%20Mello%20-%20Resume.pdf" target="_blank">Resume</a></li>
                 </ul>
             </nav>
         </div>
     </header>
-    
 
     <main class="container">
-        <section id="all-publications" class="section">
+        <section class="section-intro">
             <h2>Publications</h2>
-            <ul class="publication-list">
-                <li>
-                    <a href="assets/pdfs/An Exploration of Information Processing in Diffusion Models.pdf" target="_blank">
-                        [Master's Thesis] An Exploration of Information Processing in Diffusion Models</a>
-                    <span class="date-posted">[August 16, 2024]</span>
-                </li>
-                <li>
-                    <a href="https://ieeexplore.ieee.org/document/10497577" target="_blank">
-                        [IEEE] Multi-Resolution Diffusion for Privacy-Sensitive Recommender Systems (SDRM)</a>
-                    <span class="date-posted">[April 12, 2024]</span>
-                </li>
-                <!-- Add more publications as needed -->
-            </ul>
+            <p>Peer reviewed and published papers.</p>
         </section>
+
+        <ul class="filter-row" aria-label="Filter publications by type">
+            <li><button data-type="all" class="active">All (2)</button></li>
+            <li><button data-type="thesis"><span class="chip chip-thesis">Master's Thesis</span> 1</button></li>
+            <li><button data-type="ieee"><span class="chip chip-ieee">IEEE</span> 1</button></li>
+        </ul>
+
+        <ul class="item-grid">
+            <li class="item-card pub-card" data-type="thesis">
+                <div class="item-card-thumb" data-template="information"></div>
+                <div class="item-card-body">
+                    <div class="item-card-meta">
+                        <span class="chip chip-thesis">Master's Thesis</span>
+                        <span class="date">Aug 16, 2024</span>
+                    </div>
+                    <h3>An Exploration of Information Processing in Diffusion Models</h3>
+                    <p class="authors"><strong>Paul Jason Mello</strong></p>
+                    <p class="venue">San José State University · M.S. Thesis</p>
+                    <p class="summary">Information-theoretic analysis of denoising diffusion models.</p>
+                    <div class="item-card-links">
+                        <a href="assets/pdfs/An%20Exploration%20of%20Information%20Processing%20in%20Diffusion%20Models.pdf">Read Thesis &rarr;</a>
+                        <a href="https://github.com/pauljmello/ddpm-thesis" class="secondary" target="_blank">View Code &rarr;</a>
+                    </div>
+                </div>
+            </li>
+            <li class="item-card pub-card" data-type="ieee">
+                <div class="item-card-thumb" data-template="stack"></div>
+                <div class="item-card-body">
+                    <div class="item-card-meta">
+                        <span class="chip chip-ieee">IEEE</span>
+                        <span class="date">Apr 12, 2024</span>
+                    </div>
+                    <h3>Multi-Resolution Diffusion for Privacy-Sensitive Recommender Systems</h3>
+                    <p class="authors">Lillenthal et al. <span class="author-role">2nd Author</span></p>
+                    <p class="venue">IEEE Xplore</p>
+                    <p class="summary">Multi-resolution diffusion for privacy-sensitive recommender systems.</p>
+                    <div class="item-card-links">
+                        <a href="https://ieeexplore.ieee.org/document/10497577" target="_blank">Read Publication &rarr;</a>
+                        <a href="https://github.com/Multi-resolution-diffusion-recommender/SDRM" class="secondary" target="_blank">View Code &rarr;</a>
+                    </div>
+                </div>
+            </li>
+        </ul>
     </main>
 
     <footer>
         <div class="container">
             <p class="copyright">&copy; 2026 Paul Jason Mello</p>
             <div class="social-links">
-                <a href="https://x.com/pauljmello" target="_blank">Twitter</a> | 
-                <a href="https://www.linkedin.com/in/pauljasonmello/" target="_blank">LinkedIn</a> | 
-                <a href="https://github.com/pauljmello" target="_blank">GitHub</a> | 
+                <a href="https://x.com/pauljmello" target="_blank">Twitter</a> |
+                <a href="https://www.linkedin.com/in/pauljasonmello/" target="_blank">LinkedIn</a> |
+                <a href="https://github.com/pauljmello" target="_blank">GitHub</a> |
                 <a href="https://scholar.google.com/citations?user=AuGAXRwAAAAJ&hl=en&oi=ao" target="_blank">Google Scholar</a>
             </div>
         </div>
@@ -103,4 +131,3 @@
     <script src="assets/js/script.js"></script>
 </body>
 </html>
-
