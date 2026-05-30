@@ -749,10 +749,6 @@ p {
     gap: 16px;
 }
 
-.section-preview .item-card-thumb {
-    aspect-ratio: 5 / 2;   /* slightly taller banner for the compact home previews */
-}
-
 .section-preview .item-card-body {
     padding: 14px 16px 16px;
 }
