@@ -1,0 +1,29 @@
+# Historical site snapshot — kept locally for rollback reference only
+website_v1/
+
+# Old backup name (in case the rename hasn't been committed yet)
+_backup-pre-redesign/
+
+# Editor / IDE
+.idea/
+.vscode/
+*.swp
+*~
+
+# OS junk
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Claude Code workspace
+.claude/
+
+# Internal design docs (kept locally, not published)
+docs/
+
+# Build / dependency caches (in case any are added later)
+node_modules/
+.cache/
+
+# Local-only page (not published)
+visuals.html
